@@ -1,4 +1,3 @@
-require 'rubygems'
-require File.join(File.dirname(__FILE__), 'lib/bkmerk.rb')
+require './server'
 
-run BkMerk
+run Sinatra::Application
