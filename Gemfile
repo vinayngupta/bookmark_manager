@@ -15,4 +15,8 @@ group :development, :test do
  gem 'capybara'
  gem 'cucumber-sinatra'
  gem 'database_cleaner'
+ gem 'guard'
+ gem 'guard-cucumber'
+ gem 'guard-rspec'
+ gem 'launchy'
 end

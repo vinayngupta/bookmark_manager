@@ -2,13 +2,13 @@
 
 ENV['RACK_ENV'] = 'test'
 
-require File.join(File.dirname(__FILE__), '..', '..', 'lib/bkmerk.rb')
+require File.join(File.dirname(__FILE__), '..', '..', 'server')
 
 require 'capybara'
 require 'capybara/cucumber'
 require 'rspec'
 
-Capybara.app = BkMerk
+Capybara.app = Sinatra::Application
 
 class BkMerkWorld
   include Capybara::DSL
