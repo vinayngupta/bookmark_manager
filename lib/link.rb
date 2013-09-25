@@ -7,6 +7,9 @@ class Link
 
 	has n, :tags, :through => Resource
 
+	#this block says what the model will have 
+	#we include a unique field id in case of dupe records
+
 	property :id,		Serial #Serial means that it will be auto-incremented for each record
 	property :title,	String
 	property :url, 		String
