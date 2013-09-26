@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'data_mapper'
+require 'rack-flash'
 require './lib/link' #needs to be done after DataMapper is initialized
 require './lib/tag'
 require './lib/user'
@@ -8,6 +9,7 @@ require_relative 'data_mapper_setup'
 
 enable :sessions
 set :session_secret, 'super secret'
+use Rack::Flash
 
 
 get '/' do
@@ -32,16 +34,35 @@ get '/tags/:text' do
 end
 
 get '/users/new' do
+	@user = User.new
 	erb :"users/new"
 end
 
 post '/users' do
-	user = User.create(:email => params[:email],
+	#this was User.create initially but that results in saving to the database 
+	#which we don't want to do unless valid. 
+	@user = User.new(:email => params[:email],
 				:password => params[:password],
 				:password_confirmation => params[:password_confirmation])
-	session[:user_id] = user.id
-	redirect to('/')
+	if @user.save
+		session[:user_id] = @user.id
+		redirect to('/')
+	else
+		flash.now[:errors] = @user.errors.full_messages
+		#we replace the line below with above code 
+		#flash[:notice] = "Sorry, your passwords don't match"
+		erb :"users/new"
+	end
+
 end
+
+
+
+
+
+
+
+
 
 
 
