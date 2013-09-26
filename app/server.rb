@@ -17,6 +17,7 @@ get '/' do
 	erb :index
 end
 
+
 post '/links' do
 	url = params["url"]
 	title = params["title"]
@@ -53,7 +54,22 @@ post '/users' do
 		#flash[:notice] = "Sorry, your passwords don't match"
 		erb :"users/new"
 	end
+end
 
+get '/sessions/new' do
+	erb :"sessions/new"
+end
+
+post '/sessions' do
+	email, password = params[:email], params[:password]
+	user = User.authenticate(email, password)
+	if user
+		session[:user_id] = user.id
+		redirect to('/')
+	else
+		flash.now[:errors] = ["The email or password is incorrect"]
+		erb :"sessions/new"
+	end
 end
 
 
