@@ -1,10 +1,10 @@
 require 'sinatra'
 require 'data_mapper'
 require 'rack-flash'
-require 'sinatra-partial'
-require './app/lib/link' #needs to be done after DataMapper is initialized
-require './app/lib/tag'
-require './app/lib/user'
+require 'sinatra/partial'
+require_relative 'lib/link' #needs to be done after DataMapper is initialized
+require_relative 'lib/tag'
+require_relative 'lib/user'
 require_relative 'helpers/application'
 require_relative 'data_mapper_setup'
 
