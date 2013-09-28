@@ -5,7 +5,7 @@ body {
 
 a.button {
 	display: inline-block; /* display inline but with specific dimensions */
-	width: 				80px;
+	width: 				70px;
 	background-color: 	pink;
 	border:				2px solid white;
 	color:				black; /* text color */
@@ -17,6 +17,12 @@ a.button {
 	margin-right: 		5px;
 	text-shadow:		0 0 2px rgba(0,0,0, 0.4); /* improves readability */
 }
+
+/* a link that has both classes. Overrides the previous declaration*/
+a.button.highlighted {
+	background-color: #c0fff4;
+}
+
 
 header {
 	/*width:				100%; */
@@ -33,6 +39,12 @@ header > * {
 }
 header #logo {
 	display: flex;
+	margin-right: 20px;
+}
+
+header a {
+	color:				pink;
+	text-decoration: 	none;
 }
 
 header #user-links {
