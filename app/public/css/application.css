@@ -1,7 +1,15 @@
 body {
 	font-family:		Nunito; Arial, San-serif;
 	background-image:	url(/images/tree_bark.png)
+	color:				#333;
 }
+
+/* no links should be underlined */
+a {
+	text-decoration: none;
+	color:				blue;
+}
+
 
 a.button {
 	display: inline-block; /* display inline but with specific dimensions */
@@ -52,3 +60,48 @@ header #user-links {
 	-webkit-flex:		1;
 	text-align:			right;
 }
+
+#links-container {
+	background-color: 	white;
+	margin: 			40px;
+	box-shadow: 		0 0 5px rgba(0, 0, 0, 0.4);
+	padding:			10px;
+}
+
+.link {
+	background-color:	#c0ffd5;
+	box-shadow:			0 0 5px rgba(0, 0, 0, 0.4);
+	/* 10px for top and bottom, inherit from parent for left and right */
+	margin: 			10px inherit;
+	padding:			15px 10px;
+}
+
+.link a.title {
+	/* to make it more prominent */
+	letter-spacing: 	1px;
+}
+
+.link .description {
+	margin: 			10px inherit;
+	font-size: 			14px;
+}
+
+.link .source {
+	/* http://learnlayout.com/float.html */
+	float: right;
+	font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
