@@ -1,15 +1,41 @@
+body {
+	font-family:		Nunito; Arial, San-serif;
+}
+
+a.button {
+	display: inline-block; /* display inline but with specific dimensions */
+	width: 				80px;
+	background-color: 	#82B743;
+	border:				2px solid white;
+	color:				white; /* text color */
+	text-decoration: 	none; /* no underlining */
+	padding:			5px 10px;
+	text-align: 		center;
+	border-radius: 		4px; /* rounder corners */
+	margin-left:		5px;
+	margin-right: 		5px;
+	text-shadow:		0 0 2px rgba(0,0,0, 0.4); /* improves readability */
+}
+
 header {
-	width:				100%;
+	/*width:				100%; */
 	height:				50px;
 	background-color:	black;
 	color:				pink;
-	display:			flex;
-	padding:			0 5px;
+	display:			flex; /* http://learnlayout.com/flexbox.html */
+	padding:			0 20px;
 }
 
+/* every immediate child should be vertically centered */
+header > * {
+	margin: auto 0;
+}
 header #logo {
-	margin:				auto 0;
-	display:			flex;
-	font-family:		Nunito, Arial, Sans-serif;
+	display: flex;
 }
 
+header #user-links {
+	flex:				1;
+	-webkit-flex:		1;
+	text-align:			right;
+}
