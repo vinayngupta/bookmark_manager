@@ -6,7 +6,7 @@ body {
 
 /* no links should be underlined */
 a {
-	text-decoration: none;
+	text-decoration: 	none;
 	color:				blue;
 }
 
@@ -92,7 +92,30 @@ header #user-links {
 	font-size: 12px;
 }
 
+footer {
+	display:			flex;
+	background-color:	rgba(0, 0, 0, 0.2);
+	text-align:			center;
+	font-size: 			10px;
+}
 
+footer > * {
+	margin: auto inherit;
+}
+
+footer img {
+    /* http://stackoverflow.com/questions/10658475/3px-extra-height-on-a-div-with-an-image-inside-it */
+    vertical-align: top;
+  }
+
+ footer #technologies {
+  	-webkit-flex:		1;
+  	flex:				1;
+  }
+
+ footer p {
+  	padding:			5px 25px;
+  }
 
 
 
