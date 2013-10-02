@@ -116,6 +116,24 @@ header #user-links #welcome-message {
 	font-size: 12px;
 }
 
+h1 {
+	font-size: 			14px;
+}
+
+form {
+	text-align: 		left;
+}
+
+form p {
+	margin: 			10px 0;
+}
+
+form input[type="text"], form input[type="password"] {
+	border:				1px solid black;
+	font-size: 			12px;
+	width:				400px;
+}
+
 footer {
 	display:			flex;
 	background-color:	rgba(0, 0, 0, 0.2);
@@ -143,15 +161,6 @@ footer img {
  footer p {
   	padding:			5px 25px;
   }
-
-
-
-
-
-
-
-
-
 
 
 
