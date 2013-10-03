@@ -101,11 +101,27 @@ header #user-links #welcome-message {
 }
 
 .link {
+	position: 			relative;
 	background-color:	#c0ffd5;
 	box-shadow:			0 0 5px rgba(0, 0, 0, 0.1);
 	/* 10px for top and bottom, inherit from parent for left and right */
 	margin: 			10px inherit;
 	padding:			15px 10px;
+	/*display: 			none;  makes links invisible */
+}
+
+.link .star {
+	/* absolute but relative to the first parent that's relative */
+	position: 			absolute;
+	font-size:			18px;
+	right:				5px;
+	top:				5px;
+	color:				yellowgreen;
+	cursor:				pointer;
+}
+
+.link .star.solid {
+	opacity: 			0; /* makes it invisible */
 }
 
 .link a.title {
