@@ -27,11 +27,5 @@ feature "User adds a new link" do
 			# tags will be space separated
 			fill_in 'tags', :with => tags.join(' ')
 			click_button 'Add link'
-		end
 	end
-
-
-
-	
-	
 end

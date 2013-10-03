@@ -96,13 +96,13 @@ header #user-links #welcome-message {
 #container {
 	background-color: 	white;
 	margin: 			40px;
-	box-shadow: 		0 0 5px rgba(0, 0, 0, 0.4);
+	box-shadow: 		0 0 5px rgba(0, 0, 0, 0.1);
 	padding:			10px;
 }
 
 .link {
 	background-color:	#c0ffd5;
-	box-shadow:			0 0 5px rgba(0, 0, 0, 0.4);
+	box-shadow:			0 0 5px rgba(0, 0, 0, 0.1);
 	/* 10px for top and bottom, inherit from parent for left and right */
 	margin: 			10px inherit;
 	padding:			15px 10px;
@@ -137,7 +137,7 @@ form p {
 }
 
 form input[type="text"], form input[type="password"] {
-	border:				1px solid black;
+	border:				1px solid rgba(0, 0, 0, 0.2);
 	font-size: 			12px;
 	width:				400px;
 }
