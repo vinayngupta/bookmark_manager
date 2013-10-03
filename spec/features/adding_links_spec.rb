@@ -21,7 +21,7 @@ feature "User adds a new link" do
 	end
 
 	def add_link(url, title, tags = [ ])
-		within('#new-link') do
+		#within('#new-link') do # commented out when styling sign up and sign in
 			fill_in 'url', :with => url
 			fill_in 'title', :with => title
 			# tags will be space separated
