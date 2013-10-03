@@ -5,7 +5,7 @@ require_relative './lib/user'
 
 env = ENV["RACK_ENV"] || "development"
 #this tells datamapper to use postgres on localhost.
-DataMapper.setup(:default, ENV["DATABASE_URL"] || "postgres://localhost/bookmark_manager_#{env}")
+DataMapper.setup(:default, "postgres://hubcbhheqyiixo:FedjyZzLt7Qr7IZzb1FIqsmfXI@ec2-54-225-127-246.compute-1.amazonaws.com:5432/dd74fekhmqhtb5")
 #after declaring models you need to finalize them
 DataMapper.finalize
 
