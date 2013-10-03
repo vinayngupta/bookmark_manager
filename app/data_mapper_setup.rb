@@ -1,3 +1,8 @@
+#must require models here othewise Rakefile is usless
+require_relative './lib/link'
+require_relative './lib/tag'
+require_relative './lib/user'
+
 env = ENV["RACK_ENV"] || "development"
 #this tells datamapper to use postgres on localhost.
 DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{env}")
