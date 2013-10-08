@@ -2,6 +2,7 @@
 	box-sizing:			border-box;
 }
 
+
 body {
 	font-family:		Nunito; Arial, San-serif;
 	background-image:	url(/images/tree_bark.png)
@@ -17,7 +18,7 @@ a {
 
 .button {
 	display: inline-block; /* display inline but with specific dimensions */
-	width: 				90px;
+	max-width: 			90px;
 	cursor: 			pointer;
 	font-size: 			12px;
 	background-color: 	pink;
@@ -44,6 +45,7 @@ header {
 	background-color:	black;
 	color:				pink;
 	display:			flex; /* http://learnlayout.com/flexbox.html */
+	display:			-webkit-flex;
 	padding:			0 20px;
 }
 
